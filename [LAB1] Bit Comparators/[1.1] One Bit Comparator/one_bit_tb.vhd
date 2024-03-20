@@ -1,20 +1,20 @@
 --------------------------------------------------------------------------------
 -- University: PUC-Rio
--- Discipline: ENG1448 - Computação Digital
+-- Discipline: ENG1448 - ComputaÃ§Ã£o Digital
 -- Author: Pedro Gabriel Serodio Sales
 --
 -- Create Date:   10:03:38 03/11/2024
--- Evaluation Development Board: Spartan-3E Starter Board
+-- Evaluation          Development Board: Spartan-3E Starter Board
 -- Preferred Language: VHDL
--- Source Name: 	 VHDL Module
--- Module Name:    single_bit - Behavioral 
--- Project Name: 	 [1.1] Single Bit Comparator  
+-- Source Name:        VHDL Module
+-- Module Name:        one_bit - Behavioral 
+-- Project Name:       [1.1] One Bit Comparator  
 -- Description:   
 -- 
 -- VHDL Test Bench Created by ISE for module: single_bit
 -- 
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.02 - File Created
 -- Additional Comments:
 --
 --------------------------------------------------------------------------------
@@ -25,14 +25,14 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY single_bit_tb IS
-END single_bit_tb;
+ENTITY one_tb IS
+END one_bit_tb;
  
-ARCHITECTURE behavior OF single_bit_tb IS 
+ARCHITECTURE behavior OF one_bit_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT single_bit
+    COMPONENT one_bit
     PORT(
          A : IN  std_logic;
          B : IN  std_logic;
@@ -55,7 +55,7 @@ ARCHITECTURE behavior OF single_bit_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: single_bit PORT MAP (
+   uut: one_bit PORT MAP (
           A => A,
           B => B,
           Z => Z
