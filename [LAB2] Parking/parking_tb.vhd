@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 -- University: PUC-Rio
--- Discipline: ENG1448 - Computação Digital
--- Author: Pedro Gabriel Serodio Sales
+-- Discipline: ENG1448 - ComputaÃ§Ã£o Digital
+-- Author:     Pedro Gabriel Serodio Sales
 --
 -- Create Date:   10:03:38 03/11/2024
 -- Evaluation          Development Board: Spartan-3E Starter Board
@@ -14,7 +14,7 @@
 -- VHDL Test Bench Created by ISE for module: parking
 -- 
 -- Revision:
--- Revision 0.02 - File Created
+-- Revision 0.03 - File Created
 -- Additional Comments:
 --
 --------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ BEGIN
 	 A <='1'; B <='1'; wait for clk_period*1;
 	 A <='0'; B <='1'; wait for clk_period*1;
 	 A <='0'; B <='0'; wait for clk_period*1;
-	 -- 1o car joined
+	 -- 1st car entered
 	
 	wait for clk_period*10;
 	 A <='0'; B <='0'; wait for clk_period*5;
@@ -81,7 +81,7 @@ BEGIN
 	 A <='1'; B <='1'; wait for clk_period*5;
 	 A <='0'; B <='1'; wait for clk_period*5;
 	 A <='0'; B <='0'; wait for clk_period*5;
-	 -- 2o car joined
+	 -- 2nd car entered
 	 
 	 wait for clk_period*10;
 	 A <='0'; B <='0'; wait for clk_period*5;
@@ -89,7 +89,7 @@ BEGIN
 	 A <='1'; B <='1'; wait for clk_period*5;
 	 A <='1'; B <='0'; wait for clk_period*5;
 	 A <='0'; B <='0'; wait for clk_period*5;
-	 -- 1o car left
+	 -- 1st car left
 	 
 	 wait for clk_period*10;
 	 A <='0'; B <='0'; wait for clk_period*1;
@@ -97,7 +97,7 @@ BEGIN
 	 A <='1'; B <='1'; wait for clk_period*1;
 	 A <='1'; B <='0'; wait for clk_period*1;
 	 A <='0'; B <='0'; wait for clk_period*1;
-	 -- 2o car left
+	 -- 2nd car left
 	 wait;
 	 end process;
 END;
