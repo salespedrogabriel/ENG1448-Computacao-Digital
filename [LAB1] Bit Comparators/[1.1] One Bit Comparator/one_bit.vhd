@@ -1,18 +1,18 @@
 ----------------------------------------------------------------------------------
 -- University: PUC-Rio
--- Discipline: ENG1448 - Computação Digital
+-- Discipline: ENG1448 - ComputaÃ§Ã£o Digital
 -- Author: Pedro Gabriel Serodio Sales
 -- 
 -- Create Date:    10:03:10 03/11/2024 
 -- Evaluation Development Board: Spartan-3E Starter Board
--- Preferred Language: VHDL
+-- Preferred Language:   VHDL
 -- Source Name: 	 VHDL Module
--- Module Name:    single_bit - Behavioral 
--- Project Name: 	 1_1_Project_Single_Bit_Comparator
+-- Module Name:          one_bit - Behavioral 
+-- Project Name: 	 [1.1] One Bit Comparator
 -- Description: 
 --
 -- Revision: 
--- Revision 0.01 - File Created
+-- Revision 0.02 - File Created
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -28,13 +28,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity single_bit is
+entity one_bit is
     Port ( A : in  STD_LOGIC;
            B : in  STD_LOGIC;
            Z : out  STD_LOGIC);
-end single_bit;
+end one_bit;
 
-architecture Behavioral of single_bit is
+architecture Behavioral of one_bit is
 
 	signal comp1,comp2 : std_logic := '0';
 
