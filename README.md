@@ -2,6 +2,10 @@
 * **Course:** ENG1488
 * **Semester:** 2024.1
 * **Supervisor:** Felipe Calliari
+* **Group Members:**
+  * Pedro Gabriel Serodio Sales
+  * Thiago Levis
+
 # Description
 Repository of activities carried out during the ENG1448 - Computação Digital course at PUC-Rio 2024.2
 # Projects / Labs
