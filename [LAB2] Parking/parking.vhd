@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------
 -- University: PUC-Rio
 -- Discipline: ENG1448 - Computação Digital
--- Author: Pedro Gabriel Serodio Sales
+-- Author:     Pedro Gabriel Serodio Sales
 -- 
 -- Create Date:    09:49:55 03/18/2024 
 -- Evaluation Development Board: Spartan-3E Starter Board
@@ -12,7 +12,7 @@
 -- Description: 
 --
 -- Revision: 
--- Revision 0.02 - File Created
+-- Revision 0.03 - File Created
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ end parking;
 
 architecture Behavioral of parking is
 
-	type state_type is (idle, e1, e2, e3, e4, s1, s2, s3, s4);
+	type state_type is (idle, e1, e2, e3, e4, l1, l2, l3, l4);
 	signal state_reg, state_next: state_type := idle;
 	signal output_machine : std_logic_vector(1 downto 0) := "00";
 	signal counter : std_logic_vector(7 downto 0) := (others => '0');
@@ -73,82 +73,84 @@ begin
 		case state_reg is
 			
 			when idle =>
-				-- entrada
+				-- Starting to Enter --
 				if a = '1' and b = '0' then
-					state_next<= e1;
+					state_next<= E1;
 					output_machine <= "00";
-				-- saida
+				-- Starting to Leave --
 				elsif a = '0' and b = '1' then
-					state_next<= s1;
+					state_next<= L1;
 					output_machine <= "00";
-				-- idle
+				-- Idle --
 				elsif a = '0' and b = '0' then
 					state_next<= idle;
 					output_machine <= "00";
 				end if;
+
+			-- Cases while Entering --
 							
-			when e1 =>
+			when E1 =>
 				if a = '1' and b = '1' then
-					state_next<= e2;
+					state_next<= E2;
 					output_machine <= "00";
 				elsif a = '0' and b = '0' then
 					state_next<= idle;
 					output_machine <= "00";
 				end if;
 				
-			when e2 =>
+			when E2 =>
 				if a = '0' and b = '1' then
-					state_next<= e3;
+					state_next<= E3;
 					output_machine <= "00";
 				elsif a = '1' and b = '0' then
-					state_next<= e1;
+					state_next<= E1;
 					output_machine <= "00";
 				end if;
 			
-			when e3 =>
+			when E3 =>
 				if a = '0' and b = '0' then
-					state_next<= e4;
+					state_next<= E4;
 					output_machine <= "10";
 				elsif a = '1' and b = '1' then
-					state_next<= e1;
+					state_next<= E1;
 					output_machine <= "00";
 				end if;
 				
-			when e4 =>
+			when E4 =>
 					state_next<= idle;
 					output_machine <= "00";
 					
-			-- saida
+			-- Cases while Leaving --
 
-			when s1 =>
+			when L1 =>
 				if a = '1' and b = '1' then
-					state_next<= s2;
+					state_next<= L2;
 					output_machine <= "00";
 				elsif a = '0' and b = '0' then
 					state_next<= idle;
 					output_machine <= "00";
 				end if;
 				
-			when s2 =>
+			when L2 =>
 				if a = '1' and b = '0' then
-					state_next<= s3;
+					state_next<= L3;
 					output_machine <= "00";
 				elsif a = '0' and b = '1' then
-					state_next<= s1;
+					state_next<= L1;
 					output_machine <= "00";
 				end if;
 			
-			when s3 =>
+			when L3 =>
 				if a = '0' and b = '0' then
-					state_next<= s4;
+					state_next<= L4;
 					output_machine <= "01";
 	
 				elsif a = '1' and b = '1' then
-					state_next<= s2;
+					state_next<= L2;
 					output_machine <= "00";
 				end if;
 				
-			when s4 =>
+			when L4 =>
 					state_next<= idle;
 					output_machine <= "00";
 			
