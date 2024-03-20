@@ -1,18 +1,18 @@
 ----------------------------------------------------------------------------------
 -- University: PUC-Rio
--- Discipline: ENG1448 - Computação Digital
+-- Discipline: ENG1448 - ComputaÃ§Ã£o Digital
 -- Author: Pedro Gabriel Serodio Sales
 -- 
 -- Create Date:    10:03:10 03/11/2024 
 -- Evaluation Development Board: Spartan-3E Starter Board
--- Preferred Language: 		      VHDL
--- Source Name: 	               VHDL Module
+-- Preferred Language: 		 VHDL
+-- Source Name: 	         VHDL Module
 -- Module Name:                  one_bit - Behavioral 
--- Project Name: 	               [1.2] One Bit Comparator
+-- Project Name: 	         [1.2] One Bit Comparator
 -- Description: 
 --
 -- Revision: 
--- Revision 0.01 - File Created
+-- Revision 0.02 - File Created
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
