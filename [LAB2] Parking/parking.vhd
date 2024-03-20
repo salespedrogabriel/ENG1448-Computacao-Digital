@@ -1,18 +1,18 @@
 ----------------------------------------------------------------------------------
 -- University: PUC-Rio
--- Discipline: ENG1448 - Computação Digital
+-- Discipline: ENG1448 - ComputaÃ§Ã£o Digital
 -- Author: Pedro Gabriel Serodio Sales
 -- 
 -- Create Date:    09:49:55 03/18/2024 
 -- Evaluation Development Board: Spartan-3E Starter Board
 -- Preferred Language:           VHDL
--- Source Name: 	               VHDL Module 
+-- Source Name: 	         VHDL Module 
 -- Module Name:                  parking - Behavioral 
 -- Project Name:                 [2] Parking
 -- Description: 
 --
 -- Revision: 
--- Revision 0.01 - File Created
+-- Revision 0.02 - File Created
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
