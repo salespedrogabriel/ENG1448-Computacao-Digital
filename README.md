@@ -9,10 +9,10 @@
 # Description
 Repository of activities carried out during the ENG1448 - Computação Digital course at PUC-Rio 2024.1
 # Projects / Labs
-* [Lab 01: Bit Comparators](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2001%5D%20Bit%20Comparators) | [Video](https://youtu.be/dqNgnGApL44)
-* [Lab 02: Parking](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2002%5D%20Parking) | [Video](https://youtu.be/nQwSoyd2ZPo)
-* [Lab 03: Debounce](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2003%5D%20Debounce) | [Video](https://youtu.be/_fq4-pWdJOE)
-* [Lab 04: Keyboard with Display](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2004%5D%20Keypad%20with%20Debounce) | [Video](https://youtu.be/q7-MuYPTSPE)
+* [Lab 01: Bit Comparators](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2001%5D%20Bit%20Comparators) | [Project Goal](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/blob/main/%5BLab%2001%5D%20Bit%20Comparators/%5BLab%2001%5D%20Project%20Goal%20%5BPortuguese%5D.pdf) | [Video](https://youtu.be/dqNgnGApL44)
+* [Lab 02: Parking](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2002%5D%20Parking) | [Project Goal](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/blob/main/%5BLab%2002%5D%20Parking/%5BLab%2002%5D%20Project%20Goal%20%5BPortuguese%5D.pdf) | [Video](https://youtu.be/nQwSoyd2ZPo)
+* [Lab 03: Debounce](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2003%5D%20Debounce) | [Project Goal](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/blob/main/%5BLab%2003%5D%20Debounce/%5BLab%2003%5D%20Project%20Goal%20%5BPortuguese%5D.pdf) | [Video](https://youtu.be/_fq4-pWdJOE)
+* [Lab 04: Keyboard with Display](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2004%5D%20Keypad%20with%20Debounce) | [Project Goal](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/blob/main/%5BLab%2004%5D%20Keypad%20with%20Debounce/%5BLab%2004%5D%20Project%20Goal%20%5BPortuguese%5D.pdf) | [Video](https://youtu.be/q7-MuYPTSPE)
 * [Lab 05: PS/2](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2005%5D%20Keyboard) | [Video](https://youtu.be/01Pjgqwuxw8)
 * [Lab 06: RS232 Port](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2006%5D%20Caracteres%20Porta%20RS232) | [Video](https://youtu.be/AQ6e85-leQU)
 * [Lab 07: LCD Display](https://github.com/salespedrogabriel/ENG1448-Computacao-Digital/tree/main/%5BLab%2007%5D%20Display%20LCD) | [Video](https://youtu.be/IGZjS7nm0OY)
