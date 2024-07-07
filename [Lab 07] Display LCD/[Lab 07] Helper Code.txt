@@ -1,0 +1,77 @@
+type INIT_DATA_t is is array (0 to 11) of std_logic_vector(3 downto 0);
+signal INIT_DATA : INIT_DATA_t := (
+   0 => x"3",
+   1 => x"3",
+   2 => x"3",
+   3 => x"2",
+   4 => x"2",
+   5 => x"8",
+   6 => x"0",
+   7 => x"6",
+   8 => x"0",
+   9 => x"C",
+   10 => x"0",
+   11 => x"1"
+   );
+
+type TIME_DATA_t is is array (0 to 11) of std_logic_vector(19 downto 0);
+signal TIME_DATA : TIME_DATA_t := (
+   0 => std_logic_vector(to_unsigned(205000, 20)),
+   1 => std_logic_vector(to_unsigned(5000, 20)),
+   2 => std_logic_vector(to_unsigned(2000, 20)),
+   3 => std_logic_vector(to_unsigned(2000, 20)),
+   4 => std_logic_vector(to_unsigned(50, 20)),
+   5 => std_logic_vector(to_unsigned(2000, 20)),
+   6 => std_logic_vector(to_unsigned(50, 20)),
+   7 => std_logic_vector(to_unsigned(2000, 20))
+   8 => std_logic_vector(to_unsigned(50, 20)),
+   9 => std_logic_vector(to_unsigned(2000, 20)),
+   10 => std_logic_vector(to_unsigned(50, 20)),
+   11 => std_logic_vector(to_unsigned(2000, 20))
+   );
+
+type FSM_t is (idle, initConf_a, initConf_b, write_a, write_b, finish);
+signal STATE : FSM_t := idle;
+
+--------------------------------------
+
+process(clk)
+   variable counter : unsigned(19 downto 0) := (others => '0');
+   variable counter_limit : unsigned(19 downto 0) := (others => '0');
+   variable init_counter : unsigned(3 downto 0) := (others => '0');
+begin
+   if rising_edge(clk) then
+      case STATE is
+         when idle =>
+            --      := PORQUE COUNTER É "VARIABLE"
+            counter := counter + 1;
+            counter_limit := to_unsigned(750000, 20);
+            if (counter = counter_limit) then
+               STATE <= initConf_a;
+               counter := (others => '0');
+               init_counter := (others => '0');
+            end if;
+
+         when init_a =>
+            counter := counter + 1;
+            counter_limit := TIME_DATA(to_integer(init_counter));
+            SF_D <= INIT_DATA(to_integer(init_counter));
+            LCD_E <= '1';
+            if (counter = counter_limit) then
+               STATE <= initConf_b;
+               counter := (others => '0');
+               init_counter := init_counter + 1;
+            end if;
+            
+         when init_b =>
+            counter := counter + 1;
+            counter_limit := to_unsigned(12, counter_limit'length);
+            LCD_E <= '0';
+            if (counter = counter_limit) then
+               counter := (others => '0');
+               if (init_counter = to_unsigned(12, init_counter)) then
+                  STATE <= write_a;
+               else
+                  STATE <= initConf_a;
+               end if;
+            end if;
